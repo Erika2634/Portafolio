@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Erika Shirley Arévalo Bernal — Portfolio + QR</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- QR Code Library -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs2-fix/qrcode.min.js"></script>
+<style>
+  body { font-family:'DM Sans',sans-serif; }
+  h1,h2,.navbar-brand { font-family:'Cormorant Garamond',serif; }
+  .hero-photo { width:320px; height:400px; object-fit:cover; object-position:top;
+    border-radius:180px 180px 140px 140px; border:4px solid #dfb4e8; }
+  .card-proj-img { width:100%; height:195px; object-fit:cover; object-position:top; }
+  .avatar-sm { width:44px; height:44px; object-fit:cover; border-radius:50%; border:2px solid #dfb4e8; flex-shrink:0; }
+  .quote-mark { font-size:4rem; line-height:1; color:#dfb4e8; opacity:.6;
+    font-family:'Cormorant Garamond',serif; display:block; margin-bottom:-.5rem; }
+  .hobby-icon { font-size:3rem; }
+  .nav-link { letter-spacing:.1em; text-transform:uppercase; font-size:.8rem; }
+  .section-eyebrow { font-size:.75rem; letter-spacing:.22em; text-transform:uppercase; }
+  .footer-img-icon { width:22px; height:22px; border-radius:4px; object-fit:cover; }
+  .qr-card {
+    background: white;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+  .qr-card:hover {
+    transform: translateY(-5px);
+  }
+  #qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #qrcode img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .btn-download {
+    background: #916b9b;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  .btn-download:hover {
+    background: #7a5584;
+    color: white;
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body class="bg-light">
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar navbar-expand-lg bg-white bg-opacity-90 border-bottom sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-semibold text-purple fs-5" href="#" style="color:#916b9b!important">Erika S. A.</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link text-secondary" href="#habilidades">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#hobbies">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#testimonios">Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#qr-section">Mi QR</a></li>
+        <li class="nav-item"><a class="nav-link text-secondary" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="inicio" class="min-vh-100 d-flex align-items-center py-5" style="background:#faf6f1">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <p class="section-eyebrow text-secondary mb-2">
+          <span class="border-bottom border-secondary me-2" style="width:36px;display:inline-block"></span>
+          QA Engineer &amp; Web Developer
+        </p>
+        <h1 class="display-4 fw-light lh-sm mb-4">
+          Erika Shirley<br/><em style="color:#916b9b">Arévalo Bernal</em>
+        </h1>
+        <p class="text-secondary lh-lg mb-4" style="max-width:460px">
+          Me apasiona garantizar la calidad del software y construir experiencias web funcionales y atractivas.
+          Cuento con experiencia en pruebas QA y desarrollo de páginas web colaborativo, asegurando que cada
+          producto cumpla los más altos estándares antes de llegar al usuario final.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#proyectos" class="btn rounded-pill px-4 py-2 text-white fw-semibold"
+             style="background:#916b9b; letter-spacing:.08em">Ver mi trabajo</a>
+          <a href="/Portafolio/CV - Erika Shirley Arevalo Bernal.pdf" target="_blank"
+             class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-semibold">
+            <i class="bi bi-file-earmark-person me-1"></i> Ver CV
+          </a>
+          <a href="https://wa.me/573004150438" target="_blank"
+             class="btn rounded-pill px-4 py-2 fw-semibold text-white"
+             style="background:#25d366">
+            <i class="bi bi-whatsapp me-1"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center position-relative">
+        <img src="/Portafolio/img/mia.jpg.jpeg" alt="Erika Shirley Arévalo Bernal" class="hero-photo shadow"/>
+        <div class="position-absolute bottom-0 end-0 translate-middle-y bg-white rounded-3 px-3 py-2 shadow text-center"
+             style="right:-10px!important; bottom:20px!important; border-left:3px solid #916b9b">
+          <span class="display-6 fw-light d-block lh-1" style="font-family:'Cormorant Garamond',serif;color:#916b9b">10</span>
+          <small class="text-secondary" style="font-size:.75rem">meses de<br/>experiencia</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECCIÓN ESPECIAL: CÓDIGO QR PROFESIONAL ── -->
+<section id="qr-section" class="py-5" style="background:linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
+        <p class="section-eyebrow text-secondary mb-2">✨ Conecta conmigo</p>
+        <h2 class="fw-light display-5 mb-3">Mi <em style="color:#916b9b">Código QR</em> Profesional</h2>
+        <p class="text-secondary">Escanea este código QR para acceder directamente a mi portafolio web<br/>y conocer toda mi experiencia profesional.</p>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="qr-card shadow-lg p-4 p-md-5 text-center bg-white">
+          <div class="mb-4">
+            <i class="bi bi-qr-code-scan" style="font-size: 3rem; color: #916b9b;"></i>
+          </div>
+          
+          <!-- Contenedor para el QR Code -->
+          <div id="qrcode" class="mb-4 d-flex justify-content-center"></div>
+          
+          <div class="mt-3">
+            <p class="text-muted small mb-3">
+              <i class="bi bi-info-circle-fill me-1"></i> 
+              Este QR contiene la URL de mi portafolio profesional
+            </p>
+            <button id="downloadQR" class="btn btn-download rounded-pill px-4 py-2">
+              <i class="bi bi-download me-2"></i>Descargar Código QR
+            </button>
+            <button id="shareQR" class="btn btn-outline-secondary rounded-pill px-4 py-2 ms-2">
+              <i class="bi bi-share me-2"></i>Compartir
+            </button>
+          </div>
+          
+          <div class="mt-4 pt-3 border-top">
+            <small class="text-muted d-block">
+              📱 Escanea con tu cámara o app de QR<br>
+              🔗 URL: <span id="currentUrl" class="text-break"></span>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HABILIDADES ── -->
+<section id="habilidades" class="py-5" style="background:#1a1a2e">
+  <div class="container py-2">
+    <p class="section-eyebrow mb-1" style="color:#dfb4e8">Competencias</p>
+    <h2 class="fw-light display-5 mb-5 text-white">Mis <em style="color:#dfb4e8">habilidades</em></h2>
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <p class="section-eyebrow mb-3" style="color:#dfb4e8">🛠 Habilidades Técnicas (Duras)</p>
+        <div class="row g-3">
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🔍</div><h6 class="fw-semibold">QA Testing</h6>
+            <p class="small text-white-50 mb-0">Pruebas manuales, casos de uso y de prueba funcionales.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🌐</div><h6 class="fw-semibold">Desarrollo Web</h6>
+            <p class="small text-white-50 mb-0">HTML, CSS y JS en proyectos colaborativos.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🐛</div><h6 class="fw-semibold">Gestión de Bugs</h6>
+            <p class="small text-white-50 mb-0">Reporte y seguimiento de errores.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">⚙️</div><h6 class="fw-semibold">GitHub</h6>
+            <p class="small text-white-50 mb-0">Control de versiones y repositorios.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">📋</div><h6 class="fw-semibold">Documentación</h6>
+            <p class="small text-white-50 mb-0">Planes de prueba e informes técnicos.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🎨</div><h6 class="fw-semibold">Bootstrap</h6>
+            <p class="small text-white-50 mb-0">Diseño responsive con componentes y utilidades.</p>
+          </div></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <p class="section-eyebrow mb-3" style="color:#dfb4e8">💡 Habilidades Blandas</p>
+        <div class="row g-3">
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🤝</div><h6 class="fw-semibold">Trabajo en Equipo</h6>
+            <p class="small text-white-50 mb-0">Colaboración activa y aporte constante al grupo.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">💬</div><h6 class="fw-semibold">Comunicación</h6>
+            <p class="small text-white-50 mb-0">Clara, asertiva y orientada a la solución.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🌟</div><h6 class="fw-semibold">Actitud Positiva</h6>
+            <p class="small text-white-50 mb-0">Buena disposición y energía para cualquier reto.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">⏰</div><h6 class="fw-semibold">Responsabilidad</h6>
+            <p class="small text-white-50 mb-0">Cumplimiento de compromisos y plazos acordados.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🧠</div><h6 class="fw-semibold">Aprendizaje Rápido</h6>
+            <p class="small text-white-50 mb-0">Adaptación ágil a nuevas tecnologías y procesos.</p>
+          </div></div>
+          <div class="col-6"><div class="border border-secondary border-opacity-25 rounded-3 p-3 h-100 text-white">
+            <div class="fs-3 mb-2">🎯</div><h6 class="fw-semibold">Atención al Detalle</h6>
+            <p class="small text-white-50 mb-0">Ojo crítico para encontrar errores y mejoras.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROYECTOS ── -->
+<section id="proyectos" class="py-5" style="background:#faf6f1">
+  <div class="container">
+    <p class="section-eyebrow text-secondary mb-1">Portafolio</p>
+    <h2 class="fw-light display-5 mb-5">Mis <em style="color:#916b9b">proyectos</em></h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="https://github.com/Erika2634/StepFit"
+           target="_blank" rel="noopener" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+            <img src="/Portafolio/img/Stepfit.jpg.png" class="card-proj-img" alt="StepFit"/>
+            <div class="card-body p-4">
+              <p class="text-uppercase fw-semibold mb-1" style="font-size:.7rem;color:#bf7cc9;letter-spacing:.14em">Desarrollo Web · Tienda Deportiva</p>
+              <h5 class="fw-semibold mb-2">StepFit</h5>
+              <p class="text-secondary small mb-3">Tienda deportiva online con catálogo de calzado, inicio de sesión, sección de servicios y diseño oscuro y elegante con Bootstrap.</p>
+              <span class="small fw-semibold" style="color:#916b9b;letter-spacing:.08em;text-transform:uppercase">
+                <i class="bi bi-github me-1"></i>Ver en GitHub →
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://github.com/Erika2634/Go-Global-opportunities"
+           target="_blank" rel="noopener" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+            <img src="/Portafolio/img/Go.jpg.png" class="card-proj-img" alt="GO Global Opportunities"/>
+            <div class="card-body p-4">
+              <p class="text-uppercase fw-semibold mb-1" style="font-size:.7rem;color:#bf7cc9;letter-spacing:.14em">Desarrollo Web · Educación</p>
+              <h5 class="fw-semibold mb-2">GO — Global Opportunities</h5>
+              <p class="text-secondary small mb-3">Plataforma sobre becas, voluntariado e intercambios educativos internacionales. Diseño colorido con animaciones.</p>
+              <span class="small fw-semibold" style="color:#916b9b;letter-spacing:.08em;text-transform:uppercase">
+                <i class="bi bi-github me-1"></i>Ver en GitHub →
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://erika034.github.io/boda-esteban-erika/"
+           target="_blank" rel="noopener" class="text-decoration-none text-dark">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+            <img src="/Portafolio/img/Invitacion.jpg.png" class="card-proj-img" alt="Invitación de Boda"/>
+            <div class="card-body p-4">
+              <p class="text-uppercase fw-semibold mb-1" style="font-size:.7rem;color:#bf7cc9;letter-spacing:.14em">Desarrollo Web · Diseño</p>
+              <h5 class="fw-semibold mb-2">Tarjeta de Invitación de Boda</h5>
+              <p class="text-secondary small mb-3">Invitación digital interactiva con animación de sobre, con canción y diseño romántico en negro, verde salvia y lila.</p>
+              <span class="small fw-semibold" style="color:#916b9b;letter-spacing:.08em;text-transform:uppercase">
+                <i class="bi bi-github me-1"></i>Ver en GitHub →
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOBBIES ── -->
+<section id="hobbies" class="py-5" style="background:linear-gradient(135deg,#fdf4f5,#f4eff4)">
+  <div class="container">
+    <p class="section-eyebrow text-secondary mb-1">Sobre mí</p>
+    <h2 class="fw-light display-5 mb-5">Lo que <em style="color:#916b9b">me apasiona</em></h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100">
+          <div class="hobby-icon mb-3">🎭</div>
+          <h5 class="fw-semibold mb-2" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem">Teatro</h5>
+          <p class="text-secondary small mb-0">Me encanta el mundo de las artes escénicas. El teatro me ha enseñado a expresarme, escuchar y trabajar en equipo de una forma completamente diferente.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100">
+          <div class="hobby-icon mb-3">🎨</div>
+          <h5 class="fw-semibold mb-2" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem">Dibujar</h5>
+          <p class="text-secondary small mb-0">El dibujo es mi forma de desconectarme y explorar la creatividad. Plasmar ideas en papel me ayuda a pensar mejor en el diseño visual de los proyectos.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 text-center p-4 h-100">
+          <div class="hobby-icon mb-3">✈️</div>
+          <h5 class="fw-semibold mb-2" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem">Viajar</h5>
+          <p class="text-secondary small mb-0">Explorar nuevos lugares, culturas y personas me inspira y me abre la mente. Cada viaje alimenta mi curiosidad y ganas de aprender.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIOS ── -->
+<section id="testimonios" class="py-5" style="background:#faf6f1">
+  <div class="container">
+    <p class="section-eyebrow text-secondary mb-1">Testimonios</p>
+    <h2 class="fw-light display-5 mb-5">Lo que <em style="color:#916b9b">dicen de mí</em></h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+          <span class="badge rounded-pill fw-semibold mb-3 d-inline-flex align-items-center gap-1"
+                style="background:#ede9ff;color:#7c3aed;font-size:.72rem">
+            <i class="bi bi-people-fill"></i> Team Player
+          </span>
+          <span class="quote-mark">"</span>
+          <p class="text-secondary small lh-lg mb-3">Team, gracias por hacer posible la charla de Git 101! Cada aporte que hicimos fue increíble. Gracias por el espacio 💚</p>
+          <div class="d-flex align-items-center gap-2 mt-auto">
+            <img class="avatar-sm" src="/Portafolio/img/Luna.jpg.png" alt="Luna Gutiérrez"/>
+            <div>
+              <p class="mb-0 small fw-semibold">Luna Gutiérrez</p>
+              <p class="mb-0 small text-secondary">Compañera de equipo · hace 26 días</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+          <span class="badge rounded-pill fw-semibold mb-3 d-inline-flex align-items-center gap-1"
+                style="background:#e6f9ee;color:#16a34a;font-size:.72rem">
+            <i class="bi bi-heart-fill"></i> Be Kind
+          </span>
+          <span class="quote-mark">"</span>
+          <p class="text-secondary small lh-lg mb-3">Erika gracias por tu buena disposición, tu actitud tan positiva y la forma tan responsable en la que trabajas. Siempre sumas al equipo y da gusto contar contigo. ⭐</p>
+          <div class="d-flex align-items-center gap-2 mt-auto">
+            <img class="avatar-sm" src="/Portafolio/img/wilmar.jpg.png" alt="Wilmar Del Valle"/>
+            <div>
+              <p class="mb-0 small fw-semibold">Wilmar Del Valle</p>
+              <p class="mb-0 small text-secondary">Instructor · hace 1 mes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+          <span class="badge rounded-pill fw-semibold mb-3 d-inline-flex align-items-center gap-1"
+                style="background:#e6f9ee;color:#16a34a;font-size:.72rem">
+            <i class="bi bi-heart-fill"></i> Be Kind
+          </span>
+          <span class="quote-mark">"</span>
+          <p class="text-secondary small lh-lg mb-3">Gracias por el apoyo con las chicas programadoras 💪 #KeepRocking #ClubDeChicasProgramadoras</p>
+          <div class="d-flex align-items-center gap-2 mt-auto">
+            <img class="avatar-sm" src="/Portafolio/img/Jonny.jpg.png" alt="Jhonnatan Gil"/>
+            <div>
+              <p class="mb-0 small fw-semibold">Jhonnatan Gil</p>
+              <p class="mb-0 small text-secondary">Compañero · hace 3 meses</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DEJA TU TESTIMONIO ── -->
+<section id="dejar-testimonio" class="py-5 bg-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
+        <p class="section-eyebrow text-secondary mb-1">¿Hemos trabajado juntos?</p>
+        <h2 class="fw-light display-5 mb-2">Deja tu <em style="color:#916b9b">testimonio</em></h2>
+        <p class="text-secondary mb-4">Tu opinión es muy importante para mí. ¡Cuéntame qué tal fue trabajar juntos!</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Nombre</label>
+              <input type="text" id="inp-nombre" class="form-control rounded-3" placeholder="Tu nombre"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Rol / Relación</label>
+              <input type="text" id="inp-rol" class="form-control rounded-3" placeholder="Ej: Compañero de equipo"/>
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold">Mensaje</label>
+              <textarea id="inp-mensaje" class="form-control rounded-3" rows="3" placeholder="Escribe aquí tu testimonio..."></textarea>
+            </div>
+            <div class="col-12 text-end">
+              <button class="btn rounded-pill px-4 text-white fw-semibold"
+                      style="background:#916b9b" onclick="agregarTestimonio()">
+                Enviar testimonio ✉️
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="list-unstyled mb-0" id="newTestimonials"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="contacto" class="py-5" style="background:#1a1a2e">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-lg-5">
+        <p class="fw-light text-white mb-2" style="font-family:'Cormorant Garamond',serif;font-size:1.7rem">
+          Erika Shirley Arévalo Bernal
+        </p>
+        <p class="text-white-50 small lh-lg mb-0" style="max-width:380px">
+          QA Engineer y Web Developer con pasión por construir software de calidad.
+          Abierta a nuevas oportunidades y colaboraciones. ¡Hablemos!
+        </p>
+      </div>
+
+      <div class="col-lg-3">
+        <h6 class="text-white mb-3" style="font-size:.8rem;letter-spacing:.12em;text-transform:uppercase">Contacto</h6>
+        <div class="d-flex flex-column gap-2">
+          <a class="text-white-50 text-decoration-none d-flex align-items-center gap-2 small"
+             href="mailto:erika.arevalo034@gmail.com">
+            <i class="bi bi-envelope"></i> erika.arevalo034@gmail.com
+          </a>
+          <a class="text-white-50 text-decoration-none d-flex align-items-center gap-2 small"
+             href="https://wa.me/573004150438" target="_blank">
+            <i class="bi bi-whatsapp text-success"></i> +57 300 415 0438
+          </a>
+          <a class="text-white-50 text-decoration-none d-flex align-items-center gap-2 small"
+             href="CV_Erika_Arevalo.pdf" target="_blank">
+            <i class="bi bi-file-earmark-person"></i> Ver CV
+          </a>
+          <a class="text-white-50 text-decoration-none d-flex align-items-center gap-2 small"
+             href="https://github.com/Erika034" target="_blank">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a class="text-white-50 text-decoration-none d-flex align-items-center gap-2 small"
+             href="https://www.linkedin.com/in/erika-arevalo-0833b937a" target="_blank">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+          <a class="text-white-50 text-decoration-none d-flex align-items-center gap-2 small"
+             href="https://app.starmeup.com" target="_blank">
+            <img src="https://api.starmeup.com/starmeup-api/v2/image/MZosaurVCx_png/250/250/1"
+                 class="footer-img-icon" alt="StarmeUp"/> StarmeUp
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <h6 class="text-white mb-3" style="font-size:.8rem;letter-spacing:.12em;text-transform:uppercase">Navegación</h6>
+        <div class="d-flex flex-column gap-2">
+          <a class="text-white-50 text-decoration-none small" href="#habilidades">Habilidades</a>
+          <a class="text-white-50 text-decoration-none small" href="#proyectos">Proyectos</a>
+          <a class="text-white-50 text-decoration-none small" href="#hobbies">Sobre mí</a>
+          <a class="text-white-50 text-decoration-none small" href="#testimonios">Testimonios</a>
+          <a class="text-white-50 text-decoration-none small" href="#qr-section">Mi QR</a>
+        </div>
+      </div>
+
+    </div>
+    <hr class="border-secondary opacity-25 my-4"/>
+    <p class="text-center text-white-25 small mb-0" style="color:rgba(255,255,255,.3)">
+      © 2026 Erika Shirley Arévalo Bernal · Todos los derechos reservados
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Función para agregar testimonios
+  function agregarTestimonio() {
+    const nombre  = document.getElementById('inp-nombre').value.trim();
+    const rol     = document.getElementById('inp-rol').value.trim();
+    const mensaje = document.getElementById('inp-mensaje').value.trim();
+    if (!nombre || !mensaje) { alert('Por favor ingresa tu nombre y mensaje.'); return; }
+    const item = document.createElement('li');
+    item.className = 'card border-0 shadow-sm rounded-4 p-3 mb-3';
+    item.innerHTML = `<strong class="d-block small text-dark mb-1">${nombre}${rol ? ' · <span class="text-secondary fw-normal">' + rol + '</span>' : ''}</strong>
+                      <span class="small text-secondary">${mensaje}</span>`;
+    document.getElementById('newTestimonials').prepend(item);
+    document.getElementById('inp-nombre').value = '';
+    document.getElementById('inp-rol').value = '';
+    document.getElementById('inp-mensaje').value = '';
+  }
+
+  // Generar el código QR cuando la página carga
+  window.addEventListener('load', function() {
+    // URL actual de la página
+    const currentUrl = window.location.href;
+    document.getElementById('currentUrl').textContent = currentUrl;
+    
+    // Generar QR con tamaño óptimo
+    const qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: currentUrl,
+      width: 220,
+      height: 220,
+      colorDark: "#916b9b",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+    
+    // Botón para descargar el QR
+    document.getElementById('downloadQR').addEventListener('click', function() {
+      const qrCanvas = document.querySelector('#qrcode canvas');
+      if (qrCanvas) {
+        const link = document.createElement('a');
+        link.download = 'Erika_Arevalo_QR.png';
+        link.href = qrCanvas.toDataURL();
+        link.click();
+      } else {
+        // Si no hay canvas, intentar obtener la imagen
+        const qrImg = document.querySelector('#qrcode img');
+        if (qrImg) {
+          const link = document.createElement('a');
+          link.download = 'Erika_Arevalo_QR.png';
+          link.href = qrImg.src;
+          link.click();
+        }
+      }
+    });
+    
+    // Botón para compartir
+    document.getElementById('shareQR').addEventListener('click', function() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Erika Shirley Arévalo Bernal - Portfolio',
+          text: 'Conoce mi portafolio profesional como QA Engineer y Web Developer',
+          url: currentUrl
+        }).catch(err => {
+          console.log('Error al compartir:', err);
+          alert('Copia esta URL: ' + currentUrl);
+        });
+      } else {
+        alert('Comparte esta URL: ' + currentUrl);
+      }
+    });
+  });
+</script>
+</body>
+</html>
